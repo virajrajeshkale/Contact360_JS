@@ -12,6 +12,10 @@ const port = process.env.PORT || 5000;
 // this is an middle ware for all api that mean all api get start with this path
 app.use("/api/contacts",require("./routes/contactRoutes"));
 
+//this is middle ware for the users opeartions
+app.use("/api/user",require("./routes/userRoutes"));
+
+
 //this is used show error in json format 
 app.use(errorHandler);
 
