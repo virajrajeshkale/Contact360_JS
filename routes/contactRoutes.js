@@ -3,6 +3,10 @@ const router = express.Router();
 
 
 const {getContacts,getContact,deleteContact,updateContact,createContact} = require("../controllers/contactControllers");
+const validateToken = require("../middleware/validateTokenHandler");
+
+// before doing any opeartion check user token validate 
+router.use(validateToken);
 
 // rest Apis
 
